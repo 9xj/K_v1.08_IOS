@@ -1,0 +1,1414 @@
+/* logo/background */
+#home.ui-page, #home .ui-content {
+	height: 100% !important;
+}
+#home .first-level-wrapper {
+	height: 100%;
+	background: #ffffff url('images/logo/KAMARadroid_Background.jpg') repeat-x bottom left;
+}
+	#home .second-level-wrapper {
+		height: 100%;
+		background: transparent url('images/logo/KAMARadroid_OvL.png') no-repeat top left;
+		background-size: 100% 40%;
+	}
+		#home .third-level-wrapper {
+			height: 100%;
+			background: transparent url('images/logo/KAMARskinny_Footer.png') no-repeat bottom left;
+			background-size: 100% 43px;
+		}
+			#home .fourth-level-wrapper {
+				height: 100%;
+				background: transparent url('images/logo/KAMARadroid_Logo200.png') no-repeat center 90%;
+			}
+
+/* settings screen */
+
+#version-info {
+	font-size: 0.9em;
+	text-align: center;
+	margin-top: 50px;
+}
+
+/* common styles */
+			
+table.kamar-app-table {
+	border-collapse: collapse;
+	text-shadow: none;
+}
+	table.kamar-app-table tbody th, table.kamar-app-table tbody td {
+		border: 1px solid black;
+	}
+	table.kamar-app-table .noborders {
+		border: none;
+	}
+	table.kamar-app-table .shaded {
+		background-color: #CFDCE8;
+	}
+
+/* general fixes for the multiresolution display */
+.ui-content {
+	padding: 0px !important;
+	background: transparent !important;
+	overflow: hidden !important;
+}
+		.common-content {
+			background-color: #ffffff;
+		}
+		.common-content:after {
+			content: '.';
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+		#home .common-content {
+			background-color: transparent;
+		}
+
+/* rules for the navigation */
+.common-navigation {
+	display: none;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	float: left;
+	width: 260px;
+	height: 100%;
+	min-height: 100%;
+	overflow-y: auto;
+	border-right: 1px solid #000000;
+}
+	.common-navigation #navigation-header {
+		width: 260px;
+		position: fixed;
+		z-index: 99;
+	}
+	.common-navigation .navigation-links {
+		margin-top: 41px;
+	}
+	.common-navigation h2 {
+		height: 1.8em;
+		margin: 0px;
+		padding: 0px;
+		background-color: #D7D7D7;
+		text-align: center;
+		line-height: 1.8em;
+		color: #5E646D;
+		text-shadow: none;
+	}
+	.common-navigation h3 {
+		margin: 0px;
+		padding: 5px 10px;
+		background-color: #94A1AC;
+		border-top: 1px solid #5E6A72;
+		border-bottom: 1px solid #5E6A72;
+		color: #ffffff;
+		text-shadow: 0 1px 0 #000000;
+	}
+	.common-navigation .current {
+		background: #86C6F8;
+		border: 1px solid #2373A5;
+		color: #000000;
+		text-shadow: 0 1px 0 #ffffff;
+	}
+	.common-navigation div.navigation-link-group {
+		width: 240px;
+		margin: 10px auto;
+	}
+#home .common-navigation {
+	display: none !important;
+}
+
+.smalltext {
+	font-size: 0.8em;
+}
+
+/* Search */
+
+.search-results {
+}
+	.search-results .search-result {
+		clear: both;
+		padding: 0.8em;
+		border-bottom: 1px solid #D9D9D9;
+		cursor: pointer;
+		cursor: hand;
+		font-size: 0.8em;
+	}
+	.search-results .search-result:after {
+		content: '.';
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+	.search-results .selected {
+		background-color: #2288FF;
+	}
+		.search-results .search-result div {
+			float: left;
+			height: 1em;
+			overflow: hidden;
+			white-space:nowrap;
+		    text-overflow: ellipsis;
+		    -o-text-overflow: ellipsis;
+		    -webkit-text-overflow: ellipsis;
+			color: #000000;
+			text-shadow: none;
+		}
+		.search-results .search-result .student-name {
+			width: 70%;
+			font-weight: bold;
+		}
+		.search-results .search-result .student-yearlevel {
+			width: 10%;
+		}
+		.search-results .search-result .student-tutor {
+			width: 20%;
+		}
+
+/* Notices Display */
+
+#notices .day-details {
+	margin: 10px 0px 10px 10px;
+}
+#notices .day-details:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+	#notices .day-details div {
+		float: left;
+	}
+		#notices .day-details div a {
+			display: block;
+			padding: 5px;
+			background-color: #F4F4F4;
+			border: 1px solid #82858E;
+			color: #3E4247;
+			text-decoration: none;
+		}
+		#notices .day-details div a:hover {
+			background-color: #D4D4D4;
+		}
+	#notices .day-details .backadayarrow, #notices .day-details .todaybutton, #notices .day-details .forwardadayarrow {
+		width: 70px;
+		text-align: center;
+	}
+	#notices .day-details .day-status {
+		margin: 0px 40px;
+		padding: 5px;
+		color: #253B74;
+		font-weight: bold;
+		text-align: center;
+	}
+#notices h3 {
+	margin: 0px;
+	padding: 5px 10px;
+	background-color: #94A1AC;
+	border-top: 1px solid #5E6A72;
+	border-bottom: 1px solid #5E6A72;
+	color: #ffffff;
+	text-shadow: 0 1px 0 #000000;
+}
+#notices #notices-meetings .notice-meeting, #notices #notices-general .notice-general {
+	position: relative;
+	padding: 5px;
+	border-bottom: 1px solid #D9D9D9;
+}
+	#notices #notices-meetings .notice-meeting .subject, #notices #notices-general .notice-general .subject {
+		float: left;
+		width: 40%;
+		font-weight: bold;
+		overflow: hidden;
+		white-space:nowrap;
+	    text-overflow: ellipsis;
+	    -o-text-overflow: ellipsis;
+	    -webkit-text-overflow: ellipsis;
+	}
+	#notices #notices-meetings .notice-meeting .meet, #notices #notices-general .notice-general .meet {
+		float: left;
+		width: 60%;
+		overflow: hidden;
+		white-space:nowrap;
+	    text-overflow: ellipsis;
+	    -o-text-overflow: ellipsis;
+	    -webkit-text-overflow: ellipsis;
+	}
+	#notices #notices-meetings .notice-meeting .teacher, #notices #notices-general .notice-general .teacher {
+		position: absolute;
+		top: 5px;
+		right: 5px;
+	}
+	#notices #notices-meetings .notice-meeting .level, #notices #notices-general .notice-general .level {
+		position: absolute;
+		top: 28px;
+		left: 5px;
+		width: 10%;
+		font-size: 0.8em;
+		text-align: center;
+	}
+	#notices #notices-meetings .notice-meeting .body, #notices #notices-general .notice-general .body {
+		clear: left;
+		margin-left: 10%;
+		padding: 5px;
+	}
+
+/* Events Display */
+
+#events .month-details {
+	position: relative;
+	margin: 10px 0px 20px 0px;
+}
+	#events .month-details .backamontharrow {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 30px;
+		cursor: pointer;
+		cursor: hand;
+	}
+	#events .month-details .month-status {
+		margin: 0px 40px;
+		color: #253B74;
+		font-weight: bold;
+		text-align: center;
+	}
+	#events .month-details .forwardamontharrow {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 30px;
+		text-align: right;
+		cursor: pointer;
+		cursor: hand;
+	}
+	#events .month-details div.day-labels {
+		clear: both;
+	}
+		#events .month-details div.day-labels .day {
+			width: 9%;
+			padding: 10px 2%;
+			margin: 1px;
+			float: left;
+			text-align: center;
+			font-size: 0.8em;
+		}
+#events div#date-selector div.row {
+	clear: both;
+}
+	#events div#date-selector div.row div.day {
+		float: left;
+		width: 9%;
+		padding: 10px 2%;
+		margin: 1px;
+		background-color: #E0E0E0;
+		text-align: center;
+		cursor: pointer;
+		cursor: hand;
+	}
+	#events div#date-selector div.row div.day.has-events {
+		background-color: #C1C1C1;
+	}
+	#events div#date-selector div.row div.day:hover {
+		background-color: #D1D1D1;
+	}
+	#events div#date-selector div.row div.day.invalid-date {
+		background-color: transparent;
+		cursor: default;
+	}
+	#events div#date-selector div.row div.day.viewing {
+		background-color: #2514A7 !important;
+		color: #FFFFFF;
+	}
+#events div#event-list {
+	clear: both;
+}
+	#events div#event-list div.event-row {
+		clear: both;
+		padding: 2px 5px;
+		border-bottom: 1px solid #D9D9D9;
+	}
+	#events div#event-list div.event-row:after {
+		content: '.';
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+		#events div#event-list div.event-row .event-title {
+			width: 50%;
+			height: 1.2em;
+			min-height: 1.2em;
+			overflow: hidden;
+			white-space:nowrap;
+		    text-overflow: ellipsis;
+		    -o-text-overflow: ellipsis;
+		    -webkit-text-overflow: ellipsis;
+			float: left;
+			font-size: 0.8em;
+			font-weight: bold;
+		}
+		#events div#event-list div.event-row .event-date {
+			width: 50%;
+			height: 1.2em;
+			min-height: 1.2em;
+			overflow: hidden;
+			white-space:nowrap;
+		    text-overflow: ellipsis;
+		    -o-text-overflow: ellipsis;
+		    -webkit-text-overflow: ellipsis;
+			float: left;
+			color: #666666;
+			font-size: 0.7em;
+			text-align: right;
+		}
+		#events div#event-list div.event-row .event-location {
+			width: 20%;
+			float: left;
+			height: 1.2em;
+			min-height: 1.2em;
+			overflow: hidden;
+			white-space:nowrap;
+		    text-overflow: ellipsis;
+		    -o-text-overflow: ellipsis;
+		    -webkit-text-overflow: ellipsis;
+			font-size: 0.7em;
+			clear: left;
+		}
+		#events div#event-list div.event-row .event-description {
+			width: 80%;
+			float: left;
+			font-size: 0.7em;
+		}
+
+/* Student Details Display */
+.student-details {
+	padding: 10px 20px;
+}
+.student-details:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+	.student-details .student-name {
+		width: 60%;
+		float: left;
+	}
+	.student-details .student-year-level {
+		width: 20%;
+		float: left;
+		text-align: right;
+	}
+	.student-details .student-tutor {
+		width: 20%;
+		float: left;
+		text-align: right;
+	}
+
+#studentdetails div.left-column {
+	float: left;
+	width: 100%;
+}
+#studentdetails div.right-column {
+	float: right;
+	width: 100%;
+}
+	#studentdetails div.field-section {
+		border: 1px solid #000000;
+		margin: 5px;
+		padding: 5px;
+	}
+	#studentdetails div.field-section:after {
+		content: '.';
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+		#studentdetails h4 {
+			clear: both;
+			margin: 0px;
+		}
+		#studentdetails div.field-section h4 {
+			clear: both;
+			margin: 5px 0px 10px 0px;
+		}
+		#studentdetails div.field-section .field {
+			clear: both;
+			padding: 5px 0px;
+		}
+		#studentdetails img#student-photo {
+			display: block;
+			width: 120px;
+			margin: 10px auto;
+		}
+			#studentdetails div.field-section .field .field-name {
+				float: left;
+				width: 150px;
+				margin-right: 5px;
+				text-align: right;
+			}
+			#studentdetails div.field-section .field .field-value {
+				float: left;
+				overflow: hidden;
+			}
+			#studentdetails div.health-professionals-information {
+				margin: 5px 5px;
+			}
+			#studentdetails div.health-professionals-information:after {
+				content: '.';
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+				#studentdetails div.doctor-information, #studentdetails div.dentist-information {
+					width: 50%;
+				}
+				#studentdetails div.doctor-information {
+					float: left;
+				}
+					#studentdetails div.doctor-information div.field-section {
+						margin: 1% 1% 1% 0px;
+						padding: 1%;
+					}
+				#studentdetails div.dentist-information {
+					float: right;
+				}
+					#studentdetails div.dentist-information div.field-section {
+						margin: 1% 0px 1% 1%;
+						padding: 1%;
+					}
+			#studentdetails div.health-warning-information {
+				margin: 5px 5px;
+			}
+			#studentdetails div.health-warning-information:after {
+				content: '.';
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+				#studentdetails div.medical-information, #studentdetails div.reactions-information, #studentdetails div.vacinations-information {
+					width: 33%;
+				}
+				#studentdetails div.medical-information {
+					float: left;
+				}
+					#studentdetails div.medical-information div.field-section {
+						margin: 1% 1% 1% 0px;
+						padding: 1%;
+					}
+				#studentdetails div.reactions-information {
+					float: left;
+				}
+					#studentdetails div.reactions-information div.field-section {
+						margin: 1% 1% 1% 1%;
+						padding: 1%;
+					}
+				#studentdetails div.vacinations-information {
+					float: right;
+				}
+					#studentdetails div.vacinations-information div.field-section {
+						margin: 1% 0px 1% 1%;
+						padding: 1%;
+					}
+			#studentdetails div.special-circumstancecs-information, #studentdetails div.emergencycontact-information, #studentdetails div.notes-information, #studentdetails div.healthnotes-information {
+				margin: 5px 5px;
+			}
+				#studentdetails div.special-circumstancecs-information div.field-section, #studentdetails div.emergencycontact-information div.field-section, #studentdetails div.notes-information div.field-section, #studentdetails div.healthnotes-information div.field-section {
+					margin: 0px;
+					padding: 5px;
+				}
+
+/* Teacher Details Display */
+.teacher-details {
+	padding: 10px 20px;
+}
+.teacher-details:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+	.teacher-details .teacher-name {
+		width: 80%;
+		float: left;
+	}
+	.teacher-details .teacher-tutor, .teacher-details .teacher-class {
+		width: 20%;
+		float: left;
+		text-align: right;
+	}
+	
+#teacherdetails div.teacher-core-details, #teacherdetails div.teacher-extra-details {
+	float: left;
+	width: 100%;
+}
+#teacherdetails div.teacher-photo, #teacherdetails div.teacher-extended-details {
+	float: right;
+	width: 100%;
+}
+	#teacherdetails div.field-section {
+		border: 1px solid #000000;
+		margin: 5px;
+		padding: 5px;
+	}
+	#teacherdetails div.field-section:after {
+		content: '.';
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+		#teacherdetails div.field-section h4 {
+			clear: both;
+			margin: 5px 0px 10px 0px;
+		}
+		#teacherdetails div.field-section .field {
+			clear: both;
+			padding: 5px 0px;
+		}
+		#teacherdetails img#teacher-photo {
+			display: block;
+			width: 120px;
+			margin: 10px auto;
+		}
+			#teacherdetails div.field-section .field .field-name {
+				float: left;
+				width: 115px;
+				margin-right: 5px;
+				text-align: right;
+			}
+			#teacherdetails div.field-section .field .field-value {
+				float: left;
+				overflow: hidden;
+			}
+			#teacherdetails div#teacher-departments {
+				float: left;
+				width: 120px;
+			}
+			#teacherdetails div#teacher-classroom, #teacherdetails div#teacher-house, #teacherdetails div#teacher-extension {
+				clear: right;
+				float: right;
+				width: 200px;
+			}
+			#teacherdetails div#teacher-phone-home {
+				float: left;
+				width: 160px;
+			}
+			#teacherdetails div#teacher-phone-cell {
+				clear: none;
+				float: right;
+				width: 160px;
+			}
+			#teacherdetails div#teacher-car-park:after {
+				content: '.';
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+			}
+			#teacherdetails div#teacher-car-registration, #teacherdetails div#teacher-car-model, #teacherdetails div#teacher-car-colour {
+				clear: none;
+				float: left;
+				width: 105px;
+				font-size: 0.8em;
+			}
+				#teacherdetails div#teacher-car-registration .field-name, #teacherdetails div#teacher-car-model .field-name, #teacherdetails div#teacher-car-colour .field-name {
+					text-align: left;
+					margin: 0px 0px 5px 0px;
+				}
+
+/* timetable display */
+.timetable .week-details {
+	position: relative;
+	margin: 10px 0px 20px 0px;
+}
+	.timetable .week-details .backaweekarrow {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 30px;
+		cursor: pointer;
+		cursor: hand;
+	}
+	.timetable .week-details .week-status {
+		margin: 0px 40px;
+		color: #253B74;
+		font-weight: bold;
+		text-align: center;
+	}
+	.timetable .week-details .forwardaweekarrow {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 30px;
+		text-align: right;
+		cursor: pointer;
+		cursor: hand;
+	}
+.timetable div.day-selector {
+	width: 280px;
+	margin: 30px auto 10px auto;
+}
+
+.timetable {
+	font-size: 0.7em;
+	color: #000000;
+}
+	.timetable .period-names {
+		width: 70px;
+		float: left;
+		margin-top: 15px;
+		padding: 0px 5px 0px 0px;
+		text-align: right;
+		overflow: hidden;
+	}
+		.timetable .period-names .period-name {
+			min-height: 23px;
+			height: 23px;
+			margin-top: 1px;
+			line-height: 23px;
+			overflow: hidden;
+		}
+	.timetable .timetable-day {
+		display: none;
+		margin: 0px 20px 0px 75px;
+	}
+	.timetable .timetable-day.selected {
+		display: block;
+	}
+		.timetable .timetable-day .day-name {
+			display: none;
+			overflow: hidden;
+		}
+		.timetable .timetable-day .day-details {
+			position: relative;
+			overflow: hidden;
+		}
+			.timetable .timetable-day .day-details .date {
+			}
+			.timetable .timetable-day .day-details .calendar-status {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+			}
+		.timetable .timetable-day .period {
+			position: relative;
+			min-height: 23px;
+			height: 23px;
+			border: 1px solid #6D6D6D;
+			margin: -1px 0px 0px -1px;
+			overflow: hidden;
+			font-size: 0.8em;
+		}
+			.timetable .timetable-day .period .class-detail .line-identifier {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 60px;
+			}
+			.timetable .timetable-day .period .class-detail .subject-code {
+				position: absolute;
+				top: 0px;
+				left: 60px;
+				font-weight: bold;
+			}
+			.timetable .timetable-day .period .class-detail .room-code {
+				position: absolute;
+				bottom: 0px;
+				right: 30px;
+				width: 60px;
+			}
+			.timetable .timetable-day .period .attendance-checklist {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				width: 30px;
+				text-align: center;
+			}
+			.timetable .timetable-day .period .attendance-code {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				width: 30px;
+				text-align: center;
+				font-size: 2em;
+			}
+			
+/* student attendance display */
+#studentattendance #attendance-summary {
+	float: left;
+	margin-left: 10px;
+	font-size: 0.7em;
+	text-align: center;
+}
+	#studentattendance #attendance-summary table th, #studentattendance #attendance-summary table td {
+		width: 50px;
+		padding: 5px 0px;
+	}
+#studentattendance #attendance-explanation-text {
+	overflow: auto;
+	min-width: 360px;
+	padding-left: 10px;
+	font-size: 0.7em;
+}
+#studentattendance .attendance-row {
+	clear: both;
+	border-bottom: 1px solid #D9D9D9;
+	font-size: 0.8em;
+}
+#studentattendance .attendance-row:after {
+	content: '.';
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+	#studentattendance .week-start {
+		float: left;
+		width: 15%;
+		margin: 5px 1% 5px 0px;
+		text-align: right;
+		overflow: hidden;
+		white-space:nowrap;
+	}
+	#studentattendance .attendance-string {
+		float: left;
+		width: 14%;
+		margin: 5px 1% 5px 1%;
+		overflow: hidden;
+		white-space:nowrap;
+	}
+
+/* student results display */
+.results-navigation {
+	width: 300px !important;
+	margin: 10px auto !important;
+}
+#studentresults #all-results {
+	font-size: 0.8em;
+}
+	#studentresults #all-results .result-level {
+	}
+		#studentresults #all-results .result-level .level-heading {
+			padding: 5px 10px;
+			background-color: #828F9C;
+			color: #ffffff;
+			text-shadow: none;
+		}
+		#studentresults #all-results .result-level .result {
+			padding: 5px;
+			min-height: 2.5em;
+			position: relative;
+			border-bottom: 1px solid #D9D9D9;
+		}
+		#studentresults #all-results .result-level .result:after {
+			content: '.';
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+			/* ncea results */
+			#studentresults #all-results .result-level .ncea-assessment .result-standard-number {
+				width: 70px;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				text-align: center;
+				overflow: hidden;
+				white-space:nowrap;
+			}
+			#studentresults #all-results .result-level .ncea-assessment .result-standard-version  {
+				width: 70px;
+				position: absolute;
+				top: 1.5em;
+				left: 5px;
+				text-align: center;
+				overflow: hidden;
+				white-space:nowrap;
+			}
+			#studentresults #all-results .result-level .ncea-assessment .result-title  {
+				margin: 0px 200px 0px 70px;
+			}
+			#studentresults #all-results .result-level .ncea-assessment .result-value  {
+				width: 200px;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				text-align: center;
+			}
+			/* school based results */
+			#studentresults #all-results .result-level .school-based-assessment .result-title  {
+				margin: 0px 205px 0px 0px;
+			}
+			#studentresults #all-results .result-level .school-based-assessment .result-value  {
+				width: 200px;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				text-align: center;
+			}
+
+/* student ncea display */
+
+#studentncea #ncea-summary {
+	font-size: 0.7em;
+}
+	#studentncea #ncea-summary .ncea-wrapper {
+		float: left;
+		clear: left;
+	}
+	#studentncea #ncea-summary table.ncea-credits-by-level {
+		float: left;
+		clear: left;
+	}
+	#studentncea #ncea-summary #ncea-graph, #studentncea #ncea-summary table.ncea-credits-by-year {
+		float: left;
+		clear: right;
+	}
+	#studentncea #ncea-summary table {
+		margin-left : 10px;
+		text-align: center;
+	}
+		#studentncea #ncea-summary table th, #studentncea #ncea-summary table td {
+			padding: 5px 0px;
+		}
+		#studentncea table.ncea-overview .level {
+			width: 20px;
+		}
+		#studentncea table.ncea-overview .ncea, #studentncea table.ncea-overview .literacy, #studentncea table.ncea-overview .numeracy {
+			width: 100px;
+		}
+		#studentncea table.ncea-credit-totals .level, #studentncea table.ncea-credits-by-level .level, #studentncea table.ncea-credits-by-year .year {
+			width: 50px;
+		}
+		#studentncea table.ncea-credit-totals .name, #studentncea table.ncea-credits-by-level .name, #studentncea table.ncea-credits-by-year .name {
+			width: 40px;
+		}
+		#studentncea table.ncea-credit-totals .total, #studentncea table.ncea-credit-totals .attempted, #studentncea table.ncea-credits-by-level .total, #studentncea table.ncea-credits-by-level .attempted, #studentncea table.ncea-credits-by-year .total, #studentncea table.ncea-credits-by-year .attempted {
+			width: 60px;
+		}
+	#studentncea #ncea-summary #ncea-graph {
+		width: 300px;
+		height: 300px;
+		margin-left: 40px;
+	}
+		#studentncea #ncea-summary #ncea-graph .jqplot-data-label {
+			color: #000000;
+			font-weight: bold;
+		}
+	#studentncea #ncea-summary #understanding-ncea {
+		clear: both;
+		width: 80%;
+		margin: 0px auto;
+		padding: 10px 0px;
+	}
+		#studentncea #ncea-summary #understanding-ncea ul {
+			list-style: none;
+		}
+
+/* student qualifications display */
+
+#studentqualifications #qualifications {
+	font-size: 0.8em;
+}
+	#studentqualifications #qualifications .qualification-type {
+	}
+		#studentqualifications #qualifications .qualification-type .qualification-heading {
+			padding: 5px 10px;
+			background-color: #828F9C;
+			color: #ffffff;
+			text-shadow: none;
+		}
+		#studentqualifications #qualifications .qualification-type .qualification {
+			padding: 5px;
+			position: relative;
+			border-bottom: 1px solid #D9D9D9;
+		}
+		#studentqualifications #qualifications .qualification-type .qualification:after {
+			content: '.';
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+			#studentqualifications #qualifications .qualification-type .qualification .qualification-year {
+				width: 70px;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				text-align: center;
+				overflow: hidden;
+				white-space:nowrap;
+			}
+			#studentqualifications #qualifications .qualification-type .qualification .qualification-endorsement  {
+				width: 70px;
+				position: absolute;
+				top: 5px;
+				left: 75px;
+				text-align: center;
+				overflow: hidden;
+				white-space:nowrap;
+			}
+			#studentqualifications #qualifications .qualification-type .qualification .qualification-title  {
+				margin: 0px 0px 0px 150px;
+			}
+
+/* student groups display */
+
+#studentgroups #groups {
+	font-size: 0.8em;
+}
+	#studentgroups #groups .group-year {
+	}
+		#studentgroups #groups .group-year .group-heading {
+			padding: 5px 10px;
+			background-color: #828F9C;
+			color: #ffffff;
+			text-shadow: none;
+		}
+		#studentgroups #groups .group-year .group {
+			padding: 5px;
+			position: relative;
+			border-bottom: 1px solid #D9D9D9;
+		}
+		#studentgroups #groups .group-year .group:after {
+			content: '.';
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+			#studentgroups #groups .group-year .group .group-name {
+				width: 60%;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				font-weight: bold;
+				overflow: hidden;
+				white-space:nowrap;
+			    text-overflow: ellipsis;
+			    -o-text-overflow: ellipsis;
+			    -webkit-text-overflow: ellipsis;
+			}
+			#studentgroups #groups .group-year .group .group-teacher  {
+				width: 30%;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				text-align: right;
+				overflow: hidden;
+				white-space:nowrap;
+			    text-overflow: ellipsis;
+			    -o-text-overflow: ellipsis;
+			    -webkit-text-overflow: ellipsis;
+			}
+			#studentgroups #groups .group-year .group .group-comment  {
+				margin: 0px 0px 0px 20px;
+				padding-top: 1.2em;
+			}
+
+/* student awards display */
+
+#studentawards #awards {
+	font-size: 0.8em;
+}
+	#studentawards #awards .award-year {
+	}
+		#studentawards #awards .award-year .award-heading {
+			padding: 5px 10px;
+			background-color: #828F9C;
+			color: #ffffff;
+			text-shadow: none;
+		}
+		#studentawards #awards .award-year .award {
+			padding: 5px;
+			position: relative;
+			border-bottom: 1px solid #D9D9D9;
+		}
+		#studentawards #awards .award-year .award:after {
+			content: '.';
+			display: block;
+			height: 0;
+			clear: both;
+			visibility: hidden;
+		}
+			#studentawards #awards .award-year .award .award-title {
+				width: 60%;
+				position: absolute;
+				top: 5px;
+				left: 5px;
+				font-weight: bold;
+				overflow: hidden;
+				white-space:nowrap;
+			    text-overflow: ellipsis;
+			    -o-text-overflow: ellipsis;
+			    -webkit-text-overflow: ellipsis;
+			}
+			#studentawards #awards .award-year .award .award-teacher  {
+				width: 30%;
+				position: absolute;
+				top: 5px;
+				right: 5px;
+				text-align: right;
+				overflow: hidden;
+				white-space:nowrap;
+			    text-overflow: ellipsis;
+			    -o-text-overflow: ellipsis;
+			    -webkit-text-overflow: ellipsis;
+			}
+			#studentawards #awards .award-year .award .award-details  {
+				margin: 0px 0px 0px 20px;
+				padding-top: 1.2em;
+			}
+
+/* student pastoral display */
+
+#studentpastoral #pastoral {
+	font-size: 0.8em;
+}
+	#studentpastoral #pastoral .incident {
+		padding: 5px;
+		position: relative;
+		border-bottom: 1px solid #D9D9D9;
+	}
+	#studentpastoral #pastoral .incident:after {
+		content: '.';
+		display: block;
+		height: 0;
+		clear: both;
+		visibility: hidden;
+	}
+		#studentpastoral #pastoral .incident .incident-type {
+			width: 30px;
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			overflow: hidden;
+			white-space:nowrap;
+		}
+		#studentpastoral #pastoral .incident .incident-date  {
+			width: 100px;
+			position: absolute;
+			top: 5px;
+			right: 35px;
+			text-align: right;
+			overflow: hidden;
+			white-space:nowrap;
+		}
+		#studentpastoral #pastoral .incident .incident-teacher  {
+			width: 30px;
+			position: absolute;
+			top: 5px;
+			right: 5px;
+			text-align: right;
+			overflow: hidden;
+			white-space:nowrap;
+		}
+		#studentpastoral #pastoral .incident .incident-reason  {
+			margin: 0px 135px 0px 35px;
+			font-weight: bold;
+			overflow: hidden;
+			white-space:nowrap;
+		    text-overflow: ellipsis;
+		    -o-text-overflow: ellipsis;
+		    -webkit-text-overflow: ellipsis;
+		}
+		#studentpastoral #pastoral .incident .incident-points {
+			width: 40px;
+			position: absolute;
+			top: 1.5em;
+			left: 10px;
+			overflow: hidden;
+			white-space:nowrap;
+		}
+		#studentpastoral #pastoral .incident .incident-actions  {
+			margin: 0px 0px 0px 50px;
+		}
+			
+/* teacher attendance marking display */
+#attendancemarking .period-details {
+	position: relative;
+	margin: 10px;
+}
+	#attendancemarking .period-details .attendancesavebuttons {
+		position: absolute;
+		top: -5px;
+		left: 0px;
+		width: 100px;
+		overflow: hidden;
+		background-color: #FF0522;
+	}
+	#attendancemarking .period-details .attendancesavebuttons.attendance-finished {
+		background-color: #FFAFB4;
+	}
+		#attendancemarking .period-details .attendancesavebuttons #attendancefinishbutton {
+			display: block;
+			padding: 5px 10px;
+			text-shadow: none;
+			color: #37366B;
+			font-weight: bold;
+			text-align: center;
+			text-decoration: none;
+		}
+		#attendancemarking .period-details .attendancesavebuttons.attendance-finished #attendancefinishbutton {
+			color: #BB8CA1;
+			cursor: default;
+		}
+	#attendancemarking .period-details .date {
+		margin: 0px 80px;
+		text-align: center;
+	}
+	#attendancemarking .period-details .period-name {
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		width: 80px;
+		overflow: hidden;
+	}
+#attendancemarking #students {
+	margin-bottom: 50px;
+}
+	#attendancemarking #students .attendance-student-row {
+		position: relative;
+		line-height: 20px;
+		margin-bottom: 10px;
+		font-size: 0.9em;
+	}
+		#attendancemarking #students .attendance-student-row .attendance-student-details {
+			line-height: 22px;
+		}
+			#attendancemarking #students .attendance-student-row .attendance-student-details .attendance-student-year-level, #attendancemarking #students .attendance-student-row .attendance-student-details .attendance-student-tutor {
+				display: none;
+				overflow: hidden;
+			}
+		#attendancemarking #students .attendance-student-row .attendance-student-attendance {
+			display: none;
+			font-family: Courier, "Courier New", monospace;
+			overflow: hidden;
+		}
+		#attendancemarking #students .attendance-student-row .attendance-buttons {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+		}
+			#attendancemarking #students .attendance-student-row .attendance-buttons a {
+				display: block;
+				float: left;
+				width: 55px;
+				margin: 0px 1px;
+				padding: 1px 0px;
+				border: 1px solid #DDDDDD;
+				background-color: #FFFFCC;
+				color: #000000;
+				font-size: 9px;
+				text-align: center;
+				text-decoration: none;
+				text-shadow: none;
+				-moz-border-radius: 1em;
+				-webkit-border-radius: 1em;
+				border-radius: 1em;
+			}
+			#attendancemarking #students .attendance-student-row .attendance-buttons a:hover, #attendancemarking #students .attendance-student-row .attendance-buttons a:active {
+				background-color: #BFBF99;
+				color: #000000;
+			}
+			#attendancemarking #students .attendance-student-row .attendance-buttons a.selected {
+				background-color: #00DD00;
+			}
+			#attendancemarking #students .attendance-student-row .attendance-buttons a.selected.otherreason {
+				background-color: #00FFFF;
+			}
+			#attendancemarking #students .attendance-student-row .attendance-buttons a.disabled {
+				background-color: #DDDDDD;
+			}
+
+/* custom styles for non-pocket devices */
+@media screen and (min-width: 768px) {
+	body {
+		margin: 0px;
+	}
+		.common-header {
+			display: none;
+		}
+		.common-navigation {
+			display: block;
+		}
+		#page-wrapper {
+			margin-left: 261px;
+			height: 100%;
+		}
+			/*
+			.first-level-wrapper {
+				background: #ffffff url('images/logo/KAMARadroid_Background.jpg') no-repeat bottom left;
+				background-size: 260px 100%;
+			}
+			.second-level-wrapper {
+				background-size: 260px 40%;
+			}
+			.third-level-wrapper {
+				background-size: 260px 43px;
+			}
+			*/
+			#home .first-level-wrapper {
+				background: #ffffff url('images/logo/KAMARadroid_Background.jpg') repeat-x bottom left;
+				background-size: auto;
+			}
+			#home .second-level-wrapper {
+				background-size: 100% 40%;
+			}
+			#home .third-level-wrapper {
+				background: transparent url('images/logo/KAMARadroid_Footer.png') no-repeat bottom left;
+				background-size: 100% 82px;
+			}
+			.ui-page {
+				position: static !important;
+				height: 100%;
+			}
+	
+			/* Swap timetable display when on large resolution device */
+			#attendancemarking #students .attendance-student-row .attendance-student-details .attendance-student-year-level {
+				display: block;
+				position: absolute;
+				top: 0px;
+				right: 360px;
+				width: 40px;
+				overflow: hidden;
+				white-space:nowrap;
+			    text-overflow: ellipsis;
+			    -o-text-overflow: ellipsis;
+			    -webkit-text-overflow: ellipsis;
+			}
+			#attendancemarking #students .attendance-student-row .attendance-student-details .attendance-student-tutor {
+				display: block;
+				position: absolute;
+				top: 0px;
+				right: 280px;
+				width: 80px;
+				overflow: hidden;
+				white-space:nowrap;
+			    text-overflow: ellipsis;
+			    -o-text-overflow: ellipsis;
+			    -webkit-text-overflow: ellipsis;
+			}
+			#attendancemarking #students .attendance-student-row .attendance-buttons {
+				position: absolute;
+				top: 0px;
+				right: 70px;
+				width: 200px;
+				margin: 0px;
+			    overflow: hidden;
+			}
+			#attendancemarking #students .attendance-student-row .attendance-student-attendance {
+				display: block;
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				width: 80px;
+				overflow: hidden;
+				white-space:nowrap;
+			    text-overflow: ellipsis;
+			    -o-text-overflow: ellipsis;
+			    -webkit-text-overflow: ellipsis;
+			}
+	
+			.timetable .day-selector {
+				display: none;
+			}
+			.timetable .period-names {
+				margin-top: 65px;
+			}
+				.timetable .period-names .period-name {
+					min-height: 50px;
+					height: 50px;
+					line-height: 50px;
+				}
+			.timetable .timetable-day {
+				display: block;
+				float: left;
+				width: 15%;
+				margin: 0px;
+				font-size: 1em;
+			}
+				.timetable .timetable-day .day-name {
+					display: block;
+					border: 1px solid #6D6D6D;
+					margin: -1px 0px 0px -1px;
+					padding: 2px 0px;
+					background-color: #556C9B;
+					text-align: center;
+					font-weight: bold;
+					text-shadow: none;
+				}
+				.timetable .timetable-day .day-details {
+					border: 1px solid #6D6D6D;
+					margin: -1px 0px 0px -1px;
+					padding: 8px 0px;
+					font-size: 0.8em;
+					text-align: center;
+				}
+					.timetable .timetable-day .day-details .calendar-status {
+						position: static;
+						margin-top: 8px;
+					}
+				.timetable .timetable-day .period {
+					min-height: 50px;
+					height: 50px;
+				}
+					.timetable .timetable-day .period .class-detail {
+						display: table-cell;
+						min-height: 50px;
+						height: 50px;
+						width: 15%;
+						vertical-align: middle;
+					}
+						.timetable .timetable-day .period .class-detail .line-identifier {
+							top: 0px;
+							left: 0px;
+							width: auto;
+						}
+						.timetable .timetable-day .period .class-detail .subject-code {
+							position: static;
+							text-align: center;
+						}
+						.timetable .timetable-day .period .class-detail .room-code {
+							bottom: 0px;
+							right: 0px;
+							width: auto;
+						}
+						.timetable .timetable-day .period .attendance-checklist {
+							top: 0px;
+							right: 0px;
+							width: auto;
+						}
+						.timetable .timetable-day .period .attendance-code {
+							top: 0px;
+							right: 10px;
+							width: auto;
+						}
+	
+			/* Tweaks to attendance of large resolution device */
+			.attendancesavebuttons {
+				width: 200px;
+			}
+}
+
+/* custom styles for details screens */
+@media screen and (min-width: 1024px) {
+	#studentdetails div.left-column, #studentdetails div.right-column {
+		width: 50%;
+	}
+	
+	#teacherdetails div.teacher-photo, #teacherdetails div.teacher-core-details, #teacherdetails div.teacher-extended-details, #teacherdetails div.student-caregiver-details, #teacherdetails div.student-misc-details {
+		width: 50%;
+	}
+}
