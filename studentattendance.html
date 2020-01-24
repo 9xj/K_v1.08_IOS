@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>KAMAR Web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/master.css" />
+	<link rel="stylesheet" type="text/css" href="assets/jquery/mobile/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/jquery/plugins/jquery.jqplot.min.css" />
+	<script type="text/javascript" charset="utf-8" src="assets/cordova.js"></script>
+	<script type="text/javascript">
+		var basepath = '';
+		var assetspath = 'assets/';
+	</script>
+	<script type="text/javascript" src="assets/jquery/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="assets/jquery/mobile/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="assets/moment.min.js"></script>
+	<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="assets/excanvas.min.js"></script><![endif]-->
+	<script type="text/javascript" src="assets/jquery/plugins/jquery.jqplot.min.js"></script>
+	<script type="text/javascript" src="assets/jquery/plugins/jqplotplugins/jqplot.pieRenderer.min.js"></script>
+	<script type="text/javascript" src="assets/app/app.min.js"></script>
+</head>
+<body>
+<div id="common-navigation" class="common-navigation">
+</div>
+<div id="page-wrapper">
+	<div data-role="page" id="studentattendance" >
+		<div class="first-level-wrapper">
+			<div class="second-level-wrapper">
+				<div class="third-level-wrapper">
+					<div class="fourth-level-wrapper">
+						<div class="common-header" data-role="header" data-theme="d">
+							<a href="menu.html" data-icon="arrow-l" data-transition="slide" data-direction="reverse" >KAMAR</a>
+							<h1>Student Attendance</h1>
+							<a id="studentsearchbutton" style="display: none;" href="studentsearch.html" data-icon="arrow-r" data-transition="slide" >Search</a>
+						</div><!-- /header -->
+
+						<div data-role="content">
+							<div class="student-details ui-bar ui-bar-d" >
+								<div class="student-name">&nbsp;</div>
+								<div class="student-year-level">&nbsp;</div>
+								<div class="student-tutor">&nbsp;</div>
+							</div>
+							<div id="attendance-header">
+								<div id="attendance-summary">
+									<table class="kamar-app-table">
+										<thead>
+											<tr>
+												<th colspan="6">Attendance Rate : <span id="percentage-present"></span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th class="shaded noborders">Days</th>
+												<th class="shaded">Justifed</th>
+												<th class="shaded">Unjustifed</th>
+												<th class="shaded">Overseas</th>
+												<th class="shaded">Total</th>
+												<th class="shaded">Open</th>
+											</tr>
+											<tr>
+												<th class="shaded">Full</th>
+												<td id="full-days-justified">&nbsp;</td>
+												<td id="full-days-unjustified">&nbsp;</td>
+												<td id="full-days-overseas">&nbsp;</td>
+												<td id="full-days-total">&nbsp;</td>
+												<td id="full-days-open" class="shaded">&nbsp;</td>
+											</tr>
+											<tr>
+												<th class="shaded">Half</th>
+												<td id="half-days-justified">&nbsp;</td>
+												<td id="half-days-unjustified">&nbsp;</td>
+												<td id="half-days-overseas">&nbsp;</td>
+												<td id="half-days-total">&nbsp;</td>
+												<td id="half-days-open" class="shaded">&nbsp;</td>
+											</tr>
+											<tr>
+												<th class="shaded">%</th>
+												<td id="percentage-justified">&nbsp;</td>
+												<td id="percentage-unjustified">&nbsp;</td>
+												<td id="percentage-overseas">&nbsp;</td>
+												<td id="percentage-total">&nbsp;</td>
+												<td class="noborders" >&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div id="attendance-explanation-text">
+									<p>Justified : Student was absent from class with an explained, justified reason.<br />
+									Unjustified : Student was absent from class, either unexplained, or explained but unjustified according to the law.<br />
+									Overseas : Student was overseas on an approved trip.<br />
+									Total : Total absences for the student.<br />
+									Open : Total number of days the school was open for tuition<br /><br />
+
+									A student must attend a minimum of 240 minutes per school day to be
+							considered Present all day, or a minimum of 120 minutes to be considered
+							Present a half-day.</p>
+								</div>
+								<div id="attendance-details">
+									<div class="attendance-row">
+										<div class="week-start">Week</div>
+										<div class="attendance-string monday">Monday</div>
+										<div class="attendance-string tuesday">Tuesday</div>
+										<div class="attendance-string wednesday">Wednesday</div>
+										<div class="attendance-string thursday">Thursday</div>
+										<div class="attendance-string friday">Friday</div>
+									</div>
+								</div>
+								<div id="attendance-codes">
+								</div>
+							</div>
+						</div><!-- /content -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- /page -->
+</div>
+</body>
+</html>

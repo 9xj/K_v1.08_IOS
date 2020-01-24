@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>KAMAR Web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/master.css" />
+	<link rel="stylesheet" type="text/css" href="assets/jquery/mobile/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/jquery/plugins/jquery.jqplot.min.css" />
+	<script type="text/javascript" charset="utf-8" src="assets/cordova.js"></script>
+	<script type="text/javascript">
+		var basepath = '';
+		var assetspath = 'assets/';
+	</script>
+	<script type="text/javascript" src="assets/jquery/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="assets/jquery/mobile/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="assets/moment.min.js"></script>
+	<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="assets/excanvas.min.js"></script><![endif]-->
+	<script type="text/javascript" src="assets/jquery/plugins/jquery.jqplot.min.js"></script>
+	<script type="text/javascript" src="assets/jquery/plugins/jqplotplugins/jqplot.pieRenderer.min.js"></script>
+	<script type="text/javascript" src="assets/app/app.min.js"></script>
+</head>
+<body>
+<div id="common-navigation" class="common-navigation">
+</div>
+<div id="page-wrapper">
+	<div data-role="page" id="studentncea" >
+		<div class="first-level-wrapper">
+			<div class="second-level-wrapper">
+				<div class="third-level-wrapper">
+					<div class="fourth-level-wrapper">
+						<div class="common-header" data-role="header" data-theme="d">
+							<a href="menu.html" data-icon="arrow-l" data-transition="slide" data-direction="reverse" >KAMAR</a>
+							<h1>Student Results</h1>
+							<a id="studentsearchbutton" style="display: none;" href="studentsearch.html" data-icon="arrow-r" data-transition="slide" >Search</a>
+						</div><!-- /header -->
+
+						<div data-role="content">
+							<div class="student-details ui-bar ui-bar-d" >
+								<div class="student-name">&nbsp;</div>
+								<div class="student-year-level">&nbsp;</div>
+								<div class="student-tutor">&nbsp;</div>
+							</div>
+							<div class="results-navigation" data-role="controlgroup" data-type="horizontal" data-mini="true" >
+								<a href="studentresults.html" data-role="button" >Results</a>
+								<a href="studentncea.html" data-role="button" >NCEA</a>
+								<a href="studentqualifications.html" data-role="button" >Qualifications</a>
+							</div>
+							<div id="ncea-summary">
+								<div class="ncea-wrapper">
+									<table class="ncea-overview kamar-app-table">
+										<thead>
+											<tr>
+												<th colspan="4">National Certificate of Educational Achievement</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td class="level noborders">&nbsp;</td>
+												<th class="ncea shaded">NCEA</th>
+											</tr>
+											<tr>
+												<th class="level shaded">1</th>
+												<td id="level-1-ncea" class="ncea">&nbsp;</td>
+												<th class="literacy shaded">UE Lit</th>
+												<td id="ncea-ue-lit" class="ncea">&nbsp;</td>
+											</tr>
+											<tr>
+												<th class="level shaded">2</th>
+												<td id="level-2-ncea" class="ncea">&nbsp;</td>
+												<th class="literacy shaded">L1 Lit</th>
+												<td id="ncea-l1-lit" class="ncea">&nbsp;</td>
+											</tr>
+											<tr>
+												<th class="level shaded">3</th>
+												<td id="level-3-ncea" class="ncea">&nbsp;</td>
+												<th class="numeracy shaded">Numeracy</th>
+												<td id="ncea-numeracy" class="ncea">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+									<table class="ncea-credit-totals kamar-app-table">
+										<thead>
+											<tr>
+												<th colspan="7">Total Credits Earned</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th class="level shaded">Level</th>
+												<th class="name shaded">NA</th>
+												<th class="name shaded">A</th>
+												<th class="name shaded">M</th>
+												<th class="name shaded">E</th>
+												<th class="total shaded">Total</th>
+												<th class="attempted shaded">Attempted</th>
+											</tr>
+											<tr>
+												<th class="level shaded">Internal</th>
+												<td id="internal-na" class="name">&nbsp;</td>
+												<td id="internal-a" class="name">&nbsp;</td>
+												<td id="internal-m" class="name">&nbsp;</td>
+												<td id="internal-e" class="name">&nbsp;</td>
+												<td id="internal-total" class="total shaded">&nbsp;</td>
+												<td id="internal-attempted" class="attempted">&nbsp;</td>
+											</tr>
+											<tr>
+												<th class="level shaded">External</th>
+												<td id="external-na" class="name">&nbsp;</td>
+												<td id="external-a" class="name">&nbsp;</td>
+												<td id="external-m" class="name">&nbsp;</td>
+												<td id="external-e" class="name">&nbsp;</td>
+												<td id="external-total" class="total shaded">&nbsp;</td>
+												<td id="external-attempted" class="attempted">&nbsp;</td>
+											</tr>
+											<tr>
+												<th class="level shaded">Total</th>
+												<td id="total-na" class="name">&nbsp;</td>
+												<td id="total-a" class="name">&nbsp;</td>
+												<td id="total-m" class="name">&nbsp;</td>
+												<td id="total-e" class="name">&nbsp;</td>
+												<td id="total-total" class="total shaded">&nbsp;</td>
+												<td id="total-attempted" class="attempted">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<div id="ncea-graph"></div>
+								<table class="ncea-credits-by-level kamar-app-table">
+									<thead>
+										<tr>
+											<th colspan="7">Credits Earned by Level</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="level shaded">Level</th>
+											<th class="name shaded">NA</th>
+											<th class="name shaded">A</th>
+											<th class="name shaded">M</th>
+											<th class="name shaded">E</th>
+											<th class="total shaded">Total</th>
+											<th class="attempted shaded">Attempted</th>
+										</tr>
+										<tr>
+											<th class="level shaded">5</th>
+											<td id="level5-na" class="name">&nbsp;</td>
+											<td id="level5-a" class="name">&nbsp;</td>
+											<td id="level5-m" class="name">&nbsp;</td>
+											<td id="level5-e" class="name">&nbsp;</td>
+											<td id="level5-total" class="total shaded">&nbsp;</td>
+											<td id="level5-attempted" class="attempted">&nbsp;</td>
+										</tr>
+										<tr>
+											<th class="level shaded">4</th>
+											<td id="level4-na" class="name">&nbsp;</td>
+											<td id="level4-a" class="name">&nbsp;</td>
+											<td id="level4-m" class="name">&nbsp;</td>
+											<td id="level4-e" class="name">&nbsp;</td>
+											<td id="level4-total" class="total shaded">&nbsp;</td>
+											<td id="level4-attempted" class="attempted">&nbsp;</td>
+										</tr>
+										<tr>
+											<th class="level shaded">3</th>
+											<td id="level3-na" class="name">&nbsp;</td>
+											<td id="level3-a" class="name">&nbsp;</td>
+											<td id="level3-m" class="name">&nbsp;</td>
+											<td id="level3-e" class="name">&nbsp;</td>
+											<td id="level3-total" class="total shaded">&nbsp;</td>
+											<td id="level3-attempted" class="attempted">&nbsp;</td>
+										</tr>
+										<tr>
+											<th class="level shaded">2</th>
+											<td id="level2-na" class="name">&nbsp;</td>
+											<td id="level2-a" class="name">&nbsp;</td>
+											<td id="level2-m" class="name">&nbsp;</td>
+											<td id="level2-e" class="name">&nbsp;</td>
+											<td id="level2-total" class="total shaded">&nbsp;</td>
+											<td id="level2-attempted" class="attempted">&nbsp;</td>
+										</tr>
+										<tr>
+											<th class="level shaded">1</th>
+											<td id="level1-na" class="name">&nbsp;</td>
+											<td id="level1-a" class="name">&nbsp;</td>
+											<td id="level1-m" class="name">&nbsp;</td>
+											<td id="level1-e" class="name">&nbsp;</td>
+											<td id="level1-total" class="total shaded">&nbsp;</td>
+											<td id="level1-attempted" class="attempted">&nbsp;</td>
+										</tr>
+									</tbody>
+								</table>
+								<table class="ncea-credits-by-year kamar-app-table">
+									<thead>
+										<tr>
+											<th colspan="7">Credits Earned by Year</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th class="year shaded">Year</th>
+											<th class="name shaded">NA</th>
+											<th class="name shaded">A</th>
+											<th class="name shaded">M</th>
+											<th class="name shaded">E</th>
+											<th class="total shaded">Total</th>
+											<th class="attempted shaded">Attempted</th>
+										</tr>
+										<tr>
+											<th id="year1-year" class="year shaded">&nbsp;</th>
+											<td id="year1-na" class="name">&nbsp;</td>
+											<td id="year1-a" class="name">&nbsp;</td>
+											<td id="year1-m" class="name">&nbsp;</td>
+											<td id="year1-e" class="name">&nbsp;</td>
+											<td id="year1-total" class="total shaded">&nbsp;</td>
+											<td id="year1-attempted" class="attempted">&nbsp;</td>
+										</tr>
+										<tr>
+											<th id="year2-year" class="year shaded">&nbsp;</th>
+											<td id="year2-na" class="name">&nbsp;</td>
+											<td id="year2-a" class="name">&nbsp;</td>
+											<td id="year2-m" class="name">&nbsp;</td>
+											<td id="year2-e" class="name">&nbsp;</td>
+											<td id="year2-total" class="total shaded">&nbsp;</td>
+											<td id="year2-attempted" class="attempted">&nbsp;</td>
+										</tr>
+										<tr>
+											<th id="year3-year" class="year shaded">&nbsp;</th>
+											<td id="year3-na" class="name">&nbsp;</td>
+											<td id="year3-a" class="name">&nbsp;</td>
+											<td id="year3-m" class="name">&nbsp;</td>
+											<td id="year3-e" class="name">&nbsp;</td>
+											<td id="year3-total" class="total shaded">&nbsp;</td>
+											<td id="year3-attempted" class="attempted">&nbsp;</td>
+										</tr>
+										<tr>
+											<th id="year4-year" class="year shaded">&nbsp;</th>
+											<td id="year4-na" class="name">&nbsp;</td>
+											<td id="year4-a" class="name">&nbsp;</td>
+											<td id="year4-m" class="name">&nbsp;</td>
+											<td id="year4-e" class="name">&nbsp;</td>
+											<td id="year4-total" class="total shaded">&nbsp;</td>
+											<td id="year4-attempted" class="attempted">&nbsp;</td>
+										</tr>
+										<tr>
+											<th id="year5-year" class="year shaded">&nbsp;</th>
+											<td id="year5-na" class="name">&nbsp;</td>
+											<td id="year5-a" class="name">&nbsp;</td>
+											<td id="year5-m" class="name">&nbsp;</td>
+											<td id="year5-e" class="name">&nbsp;</td>
+											<td id="year5-total" class="total shaded">&nbsp;</td>
+											<td id="year5-attempted" class="attempted">&nbsp;</td>
+										</tr>
+									</tbody>
+								</table>
+								<div id="understanding-ncea">
+									<p><strong>Understanding NCEA</strong></p>
+									<ul>
+										<li>Level 1 : 80+ Credits, at Level 1 or above (plus L1 Lit / Num)</li>
+										<li>Level 2 : 80+ Credits, 20 from Level 1 and 60+ from Level 2 or above</li>
+										<li>Level 3 : 80+ Credits, 20 from Level 2 and 60+ from Level 3 or above</li>
+									</ul>
+									<a href="http://www.nzqa.govt.nz" title="Vist the NZQA Website" >www.nzqa.govt.nz</a>
+								</div>
+							</div>
+						</div><!-- /content -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- /page -->
+</div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>KAMAR Web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/master.css" />
+	<link rel="stylesheet" type="text/css" href="assets/jquery/mobile/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/jquery/plugins/jquery.jqplot.min.css" />
+	<script type="text/javascript" charset="utf-8" src="assets/cordova.js"></script>
+	<script type="text/javascript">
+		var basepath = '';
+		var assetspath = 'assets/';
+	</script>
+	<script type="text/javascript" src="assets/jquery/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="assets/jquery/mobile/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="assets/moment.min.js"></script>
+	<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="assets/excanvas.min.js"></script><![endif]-->
+	<script type="text/javascript" src="assets/jquery/plugins/jquery.jqplot.min.js"></script>
+	<script type="text/javascript" src="assets/jquery/plugins/jqplotplugins/jqplot.pieRenderer.min.js"></script>
+	<script type="text/javascript" src="assets/app/app.min.js"></script>
+</head>
+<body>
+<div id="common-navigation" class="common-navigation">
+</div>
+<div id="page-wrapper">
+	<div data-role="page" id="studentdetails" >
+		<div class="first-level-wrapper">
+			<div class="second-level-wrapper">
+				<div class="third-level-wrapper">
+					<div class="fourth-level-wrapper">
+						<div class="common-header" data-role="header" data-theme="d">
+							<a href="menu.html" data-icon="arrow-l" data-transition="slide" data-direction="reverse" >KAMAR</a>
+							<h1>Student Details</h1>
+							<a id="studentsearchbutton" style="display: none;" href="studentsearch.html" data-icon="arrow-r" data-transition="slide" >Search</a>
+						</div><!-- /header -->
+
+						<div data-role="content">
+							<div class="student-details ui-bar ui-bar-d" >
+								<div class="student-name">&nbsp;</div>
+								<div class="student-year-level">&nbsp;</div>
+								<div class="student-tutor">&nbsp;</div>
+							</div>
+							<div class="right-column">
+								<img id="student-photo" src="" />
+							</div>
+							<div class="left-column">
+								<div class="student-core-details">
+									<div class="personal-identification field-section">
+										<div id="student-first-name" class="field">
+											<div class="field-name">First Name:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="student-fore-names" class="field">
+											<div class="field-name">Fore Names:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="student-last-name" class="field">
+											<div class="field-name">Last Name:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="student-gender" class="field">
+											<div class="field-name">Gender:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="student-date-of-birth" class="field">
+											<div class="field-name">Date of Birth:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="student-age" class="field">
+											<div class="field-name">&nbsp;</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="student-ethnicity" class="field">
+											<div class="field-name">Ethnicity:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="student-nsn" class="field">
+											<div class="field-name">NSN:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+									</div>
+								</div>
+								<div class="student-residence-details">
+									<div class="parent-information field-section">
+										<div id="parent-a-title" class="field">
+											<div class="field-name">Parents (Title):</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="parent-a-salutation" class="field">
+											<div class="field-name">Salutation:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="parent-a-email" class="field">
+											<div class="field-name">&nbsp;</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="parent-a-phone" class="field">
+											<div class="field-name">Phone:</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="parent-a-physical-address" class="field">
+											<div class="field-name">Physical Address:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+									</div>
+									<div class="parent-information field-section">
+										<div id="parent-b-title" class="field">
+											<div class="field-name">Parents (Title):</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="parent-b-salutation" class="field">
+											<div class="field-name">Salutation:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="parent-b-email" class="field">
+											<div class="field-name">&nbsp;</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="parent-b-phone" class="field">
+											<div class="field-name">Phone:</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="parent-b-physical-address" class="field">
+											<div class="field-name">Physical Address:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+									</div>
+								</div>
+								<div class="student-health-details">
+									<div class="health-professionals-information">
+										<div class="doctor-information">
+											<h4>Doctor</h4>
+											<div class="field-section">
+												<div id="doctor-name" class="field">
+													<div class="field-name"></div>
+													<div class="field-value">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+										<div class="dentist-information">
+											<h4>Dentist</h4>
+											<div class="field-section">
+												<div id="dentist-name" class="field">
+													<div class="field-name"></div>
+													<div class="field-value">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="medication-information field-section">
+										<div id="panadol-allowed" class="field">
+											<div class="field-name">Allowed Panadol:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+									</div>
+									<div class="medication-information field-section">
+										<div id="ibuprofen-allowed" class="field">
+											<div class="field-name">Allowed Ibuprofen:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+									</div>
+									<div class="health-warning-information">
+										<div class="medical-information">
+											<h4>Medical</h4>
+											<div class="field-section">
+												<div id="medical" class="field">
+													<div class="field-name"></div>
+													<div class="field-value">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+										<div class="reactions-information">
+											<h4>Reactions</h4>
+											<div class="field-section">
+												<div id="reactions" class="field">
+													<div class="field-name"></div>
+													<div class="field-value">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+										<div class="vacinations-information">
+											<h4>Vacinations</h4>
+											<div class="field-section">
+												<div id="vacinations" class="field">
+													<div class="field-name"></div>
+													<div class="field-value">&nbsp;</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="right-column">
+								<div class="student-caregiver-details">
+									<div class="caregiver-information field-section">
+										<div id="caregiver-1-name" class="field">
+											<div class="field-name">Name:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="caregiver-1-status" class="field">
+											<div class="field-name">Status:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="caregiver-1-email" class="field">
+											<div class="field-name">e-mail:</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="caregiver-1-phone-home" class="field">
+											<div class="field-name">Phone (Home):</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="caregiver-1-phone-mobile" class="field">
+											<div class="field-name">Phone (Mobile):</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="caregiver-1-phone-work" class="field">
+											<div class="field-name">Phone (Work):</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="caregiver-1-occupation" class="field">
+											<div class="field-name">Occupation:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="caregiver-1-work-address" class="field">
+											<div class="field-name">Work Address:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+									</div>
+									<div class="caregiver-information field-section">
+										<div id="caregiver-2-name" class="field">
+											<div class="field-name">Name:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="caregiver-2-status" class="field">
+											<div class="field-name">Status:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="caregiver-2-email" class="field">
+											<div class="field-name">e-mail:</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="caregiver-2-phone-home" class="field">
+											<div class="field-name">Phone (Home):</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="caregiver-2-phone-mobile" class="field">
+											<div class="field-name">Phone (Mobile):</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="caregiver-2-phone-work" class="field">
+											<div class="field-name">Phone (Work):</div>
+											<div class="field-value"><a href="#">&nbsp;</a></div>
+										</div>
+										<div id="caregiver-2-occupation" class="field">
+											<div class="field-name">Occupation:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+										<div id="caregiver-2-work-address" class="field">
+											<div class="field-name">Work Address:</div>
+											<div class="field-value">&nbsp;</div>
+										</div>
+									</div>
+									<div class="emergencycontact-information">
+										<h4>Emergency Contact</h4>
+										<div class="field-section">
+											<div id="emergencycontact-name" class="field">
+												<div class="field-name">Name:</div>
+												<div class="field-value">&nbsp;</div>
+											</div>
+											<div id="emergencycontact-phone-home" class="field">
+												<div class="field-name">Phone (Home):</div>
+												<div class="field-value"><a href="#">&nbsp;</a></div>
+											</div>
+											<div id="emergencycontact-phone-mobile" class="field">
+												<div class="field-name">Phone (Mobile):</div>
+												<div class="field-value"><a href="#">&nbsp;</a></div>
+											</div>
+											<div id="emergencycontact-phone-work" class="field">
+												<div class="field-name">Phone (Work):</div>
+												<div class="field-value"><a href="#">&nbsp;</a></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- /content -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- /page -->
+</div>
+</body>
+</html>

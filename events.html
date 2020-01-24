@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>KAMAR Web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/master.css" />
+	<link rel="stylesheet" type="text/css" href="assets/jquery/mobile/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/jquery/plugins/jquery.jqplot.min.css" />
+	<script type="text/javascript" charset="utf-8" src="assets/cordova.js"></script>
+	<script type="text/javascript">
+		var basepath = '';
+		var assetspath = 'assets/';
+	</script>
+	<script type="text/javascript" src="assets/jquery/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="assets/jquery/mobile/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="assets/moment.min.js"></script>
+	<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="assets/excanvas.min.js"></script><![endif]-->
+	<script type="text/javascript" src="assets/jquery/plugins/jquery.jqplot.min.js"></script>
+	<script type="text/javascript" src="assets/jquery/plugins/jqplotplugins/jqplot.pieRenderer.min.js"></script>
+	<script type="text/javascript" src="assets/app/app.min.js"></script>
+</head>
+<body>
+<div id="common-navigation" class="common-navigation">
+</div>
+<div id="page-wrapper">
+	<div data-role="page" id="events" >
+		<div class="first-level-wrapper">
+			<div class="second-level-wrapper">
+				<div class="third-level-wrapper">
+					<div class="fourth-level-wrapper">
+						<div class="common-header" data-role="header" data-theme="d">
+							<a href="menu.html" data-icon="arrow-l" data-transition="slide" data-direction="reverse" >KAMAR</a>
+							<h1>Attendance Marking</h1>
+						</div><!-- /header -->
+
+						<div data-role="content">
+							<div class="month-details">
+								<div class="backamontharrow"><img src="assets/images/LeftArrowBlack.png" title="Show previous month" /></div>
+								<div class="month-status">&nbsp;</div>
+								<div class="forwardamontharrow"><img src="assets/images/RightArrowBlack.png" title="Show next month" /></div>
+								<div class="day-labels">
+									<div class="day">Sun</div>
+									<div class="day">Mon</div>
+									<div class="day">Tue</div>
+									<div class="day">Wed</div>
+									<div class="day">Thur</div>
+									<div class="day">Fri</div>
+									<div class="day">Sat</div>
+								</div>
+							</div>
+							<div id="date-selector">
+								<div class="row">
+									<div id="day-1-sunday" class="day invalid-date">&nbsp;</div>
+									<div id="day-1-monday" class="day invalid-date">&nbsp;</div>
+									<div id="day-1-tuesday" class="day invalid-date">&nbsp;</div>
+									<div id="day-1-wednesday" class="day invalid-date">&nbsp;</div>
+									<div id="day-1-thursday" class="day invalid-date">&nbsp;</div>
+									<div id="day-1-friday" class="day invalid-date">&nbsp;</div>
+									<div id="day-1-saturday" class="day invalid-date">&nbsp;</div>
+								</div>
+								<div class="row">
+									<div id="day-2-sunday" class="day invalid-date">&nbsp;</div>
+									<div id="day-2-monday" class="day invalid-date">&nbsp;</div>
+									<div id="day-2-tuesday" class="day invalid-date">&nbsp;</div>
+									<div id="day-2-wednesday" class="day invalid-date">&nbsp;</div>
+									<div id="day-2-thursday" class="day invalid-date">&nbsp;</div>
+									<div id="day-2-friday" class="day invalid-date">&nbsp;</div>
+									<div id="day-2-saturday" class="day invalid-date">&nbsp;</div>
+								</div>
+								<div class="row">
+									<div id="day-3-sunday" class="day invalid-date">&nbsp;</div>
+									<div id="day-3-monday" class="day invalid-date">&nbsp;</div>
+									<div id="day-3-tuesday" class="day invalid-date">&nbsp;</div>
+									<div id="day-3-wednesday" class="day invalid-date">&nbsp;</div>
+									<div id="day-3-thursday" class="day invalid-date">&nbsp;</div>
+									<div id="day-3-friday" class="day invalid-date">&nbsp;</div>
+									<div id="day-3-saturday" class="day invalid-date">&nbsp;</div>
+								</div>
+								<div class="row">
+									<div id="day-4-sunday" class="day invalid-date">&nbsp;</div>
+									<div id="day-4-monday" class="day invalid-date">&nbsp;</div>
+									<div id="day-4-tuesday" class="day invalid-date">&nbsp;</div>
+									<div id="day-4-wednesday" class="day invalid-date">&nbsp;</div>
+									<div id="day-4-thursday" class="day invalid-date">&nbsp;</div>
+									<div id="day-4-friday" class="day invalid-date">&nbsp;</div>
+									<div id="day-4-saturday" class="day invalid-date">&nbsp;</div>
+								</div>
+								<div class="row">
+									<div id="day-5-sunday" class="day invalid-date">&nbsp;</div>
+									<div id="day-5-monday" class="day invalid-date">&nbsp;</div>
+									<div id="day-5-tuesday" class="day invalid-date">&nbsp;</div>
+									<div id="day-5-wednesday" class="day invalid-date">&nbsp;</div>
+									<div id="day-5-thursday" class="day invalid-date">&nbsp;</div>
+									<div id="day-5-friday" class="day invalid-date">&nbsp;</div>
+									<div id="day-5-saturday" class="day invalid-date">&nbsp;</div>
+								</div>
+							</div>
+							<div id="event-list">
+							</div>
+						</div><!-- /content -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- /page -->
+</div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>KAMAR Web</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="assets/master.css" />
+	<link rel="stylesheet" type="text/css" href="assets/jquery/mobile/jquery.mobile-1.2.0.min.css" />
+	<link rel="stylesheet" type="text/css" href="assets/jquery/plugins/jquery.jqplot.min.css" />
+	<script type="text/javascript" charset="utf-8" src="assets/cordova.js"></script>
+	<script type="text/javascript">
+		var basepath = '';
+		var assetspath = 'assets/';
+	</script>
+	<script type="text/javascript" src="assets/jquery/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="assets/jquery/mobile/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="assets/moment.min.js"></script>
+	<!--[if lt IE 9]><script language="javascript" type="text/javascript" src="assets/excanvas.min.js"></script><![endif]-->
+	<script type="text/javascript" src="assets/jquery/plugins/jquery.jqplot.min.js"></script>
+	<script type="text/javascript" src="assets/jquery/plugins/jqplotplugins/jqplot.pieRenderer.min.js"></script>
+	<script type="text/javascript" src="assets/app/app.min.js"></script>
+</head>
+<body>
+<div id="common-navigation" class="common-navigation">
+</div>
+<div id="page-wrapper">
+	<div data-role="page" id="teacherdetails" >
+		<div class="first-level-wrapper">
+			<div class="second-level-wrapper">
+				<div class="third-level-wrapper">
+					<div class="fourth-level-wrapper">
+						<div class="common-header" data-role="header" data-theme="d">
+							<a href="menu.html" data-icon="arrow-l" data-transition="slide" data-direction="reverse" >KAMAR</a>
+							<h1>Teacher Details</h1>
+							<a href="teachersearch.html" data-icon="arrow-r" data-transition="slide" >Search</a>
+						</div><!-- /header -->
+
+						<div data-role="content">
+							<div class="teacher-details ui-bar ui-bar-d">
+								<div class="teacher-name">&nbsp;</div>
+								<div class="teacher-tutor">&nbsp;</div>
+							</div>
+							<div class="teacher-photo">
+								<img id="teacher-photo" src="" />
+							</div>
+							<div class="teacher-core-details">
+								<div class="personal-identification field-section">
+									<div id="teacher-title" class="field">
+										<div class="field-name">Title:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-first-name" class="field">
+										<div class="field-name">First Name:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-last-name" class="field">
+										<div class="field-name">Last Name:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-school-email" class="field">
+										<div class="field-name">School Email:</div>
+										<div class="field-value"><a href="#">&nbsp;</a></div>
+									</div>
+									<div id="teacher-personal-email" class="field">
+										<div class="field-name">Personal Email:</div>
+										<div class="field-value"><a href="#">&nbsp;</a></div>
+									</div>
+								</div>
+								<div class="role-information field-section">
+									<h4>Role Details</h4>
+									<div id="teacher-departments" class="field">
+										<div class="field-name"></div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-classroom" class="field">
+										<div class="field-name">Classroom:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-house" class="field">
+										<div class="field-name">House:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-extension" class="field">
+										<div class="field-name">Extension:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+								</div>
+								<div class="contact-information field-section">
+									<h4>Contact Details</h4>
+									<div id="teacher-phone-home" class="field">
+										<div class="field-name"></div>
+										<div class="field-value"><a href="#">&nbsp;</a></div>
+									</div>
+									<div id="teacher-phone-cell" class="field">
+										<div class="field-name"></div>
+										<div class="field-value"><a href="#">&nbsp;</a></div>
+									</div>
+									<div id="teacher-address" class="field">
+										<div class="field-name">Address:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-partner" class="field">
+										<div class="field-name">Partner:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+								</div>
+								<div class="vehicle-information field-section">
+									<h4>Vehicle Details</h4>
+									<div id="teacher-car-park" class="field">
+										<div class="field-name">Car Park:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-car-registration" class="field">
+										<div class="field-name">Registration:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-car-model" class="field">
+										<div class="field-name">Make / Model:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-car-colour" class="field">
+										<div class="field-name">Colour:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+								</div>
+							</div>
+							<div class="teacher-extended-details">
+								<div class="nextofkin-information field-section">
+									<h4>Next of Kin</h4>
+									<div id="teacher-nextofkin-name" class="field">
+										<div class="field-name">Name:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-nextofkin-relationship" class="field">
+										<div class="field-name">Relationship:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-nextofkin-phone-home" class="field">
+										<div class="field-name">Home Phone:</div>
+										<div class="field-value"><a href="#">&nbsp;</a></div>
+									</div>
+									<div id="teacher-nextofkin-phone-cell" class="field">
+										<div class="field-name">Mobile:</div>
+										<div class="field-value"><a href="#">&nbsp;</a></div>
+									</div>
+									<div id="teacher-nextofkin-phone-work" class="field">
+										<div class="field-name">Work Phone:</div>
+										<div class="field-value"><a href="#">&nbsp;</a></div>
+									</div>
+									<div id="teacher-nextofkin-address" class="field">
+										<div class="field-name">Address:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+								</div>
+								<div class="alternativecontact-information field-section">
+									<h4>Alternative Contact</h4>
+									<div id="teacher-altcontact-name" class="field">
+										<div class="field-name">Name:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-altcontact-relationship" class="field">
+										<div class="field-name">Relationship:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+									<div id="teacher-altcontact-phone-home" class="field">
+										<div class="field-name">Home Phone:</div>
+										<div class="field-value"><a href="#">&nbsp;</a></div>
+									</div>
+									<div id="teacher-altcontact-phone-cell" class="field">
+										<div class="field-name">Mobile:</div>
+										<div class="field-value"><a href="#">&nbsp;</a></div>
+									</div>
+									<div id="teacher-altcontact-phone-work" class="field">
+										<div class="field-name">Work Phone:</div>
+										<div class="field-value"><a href="#">&nbsp;</a></div>
+									</div>
+									<div id="teacher-altcontact-address" class="field">
+										<div class="field-name">Address:</div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+								</div>
+							</div>
+							<div class="teacher-extra-details">
+								<div class="responsibilities-information field-section">
+									<h4>Responsibilities</h4>
+									<div id="teacher-responsibilities" class="field">
+										<div class="field-name"></div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+								</div>
+								<div class="committees-information field-section">
+									<h4>Committees</h4>
+									<div id="teacher-committees" class="field">
+										<div class="field-name"></div>
+										<div class="field-value">&nbsp;</div>
+									</div>
+								</div>
+							</div>
+						</div><!-- /content -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- /page -->
+</div>
+</body>
+</html>
